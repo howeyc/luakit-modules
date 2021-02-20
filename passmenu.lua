@@ -21,19 +21,8 @@ local _M = {}
 -- @readwrite
 _M.menu_cmd = "passmenu"
 
-
-local function run_passmenu(w)
-    w.view:eval_js(string.format([=[
-        var e = document.activeElement;
-        if (e && 'password' === e.type)) {
-            var s = e.value;
-            s;
-        } else 'false';
-    ]=]), { callback = function(s)
-        if "false" ~= s then
-            luakit.spawn(_M.menu_cmd)
-        end
-    end })
+local function run_passmenu()
+    luakit.spawn(_M.menu_cmd)
 end
 
 add_binds("insert", {

@@ -15,7 +15,7 @@ domrem.pattern_maker = domrem.pattern_styles.match_label
 Integrate with [pass](https://passwordstore.org) or
 [age-pass](https://github.com/howeyc/age-pass) using a dmenu-like selector.
 
-When hovering a 'password' type input, press <Ctrl-p> to open the menu. The 
+When in input mode, press <Ctrl-p> to open the menu. The
 assumption is the program you run will put the password on the clipboard. You
 then paste it yourself. It's basically a hotkey to run the menu, that's all.
 
